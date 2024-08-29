@@ -29,6 +29,7 @@ public class ReceptionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Chat newChat = Chat.builder()
+                .idChat(chatsList.size())
                 .nom(req.getParameter("nom"))
                 .race(req.getParameter("race"))
                 .repasFavoris(req.getParameter("repas"))
